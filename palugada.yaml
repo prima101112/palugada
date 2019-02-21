@@ -1,0 +1,25 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: palugada
+  namespace: default
+spec:
+  selector:
+    app: palugada
+  ports:
+  - port: 80
+    targetPort: 8080
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: palugada
+  namespace: default
+spec:
+  containers:
+  - image: prima101112/palugada:0.2
+    # args: add this to modify flags
+    imagePullPolicy: IfNotPresent
+    name: palugada
+  restartPolicy: Always
