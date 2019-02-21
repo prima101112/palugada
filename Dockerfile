@@ -1,5 +1,5 @@
 FROM alpine
-MAINTAINER Prima Adi <prima101112@gmail.com>
+LABEL maintainer="prima101112@gmail.com"
 
 RUN apk update && apk add \
     tcpdump \
