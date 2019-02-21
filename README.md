@@ -17,12 +17,12 @@ or dump tcp with tcp dump
 this image also produce logs in interval time (default 10 minutes) 
 this feature is to test logging system. when u setup logging system
 using flags to set it on of
-`-logtest=true` #enable log testing
-`-logintv=3` #log interval in second
-`-logstr=3` #log string that will be printed or pass to logging system
+- `-logtest=true` #enable log testing
+- `-logintv=3` #log interval in second
+- `-logstr=3` #log string that will be printed or pass to logging system
 
 ### server ping pong
-`-port=8080` #this is port where palugada running
+- `-port=8080` #this is port where palugada running
 
 ### include vim and redis
 in case anyone edit file inside the pods or check redis connection 
