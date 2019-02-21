@@ -21,7 +21,7 @@ func main() {
 	flag.IntVar(&cfg.LogIntv, "logintv", 600, "logintv is this app will produce log in each how many second (default 10 minutes)")
 	flag.StringVar(&cfg.LogStr, "logstr", "this is testing logs", "logintv is this app will produce log like this")
 	flag.StringVar(&cfg.Port, "port", "8080", "logintv is this app will produce log like this")
-
+	flag.Parse()
 	if cfg.Logtest {
 		go logs(cfg)
 	}
