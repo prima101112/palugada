@@ -27,6 +27,10 @@ using flags to set it on of
 ### include vim and redis
 in case anyone edit file inside the pods or check redis connection 
 
+## Docker pull
+you clould pull it by 
+`docker pull prima101112/palugada:0.2`
+
 ## Kubernetes
 you could apply this at once with
 `kubectl create -f https://raw.githubusercontent.com/prima101112/palugada/master/palugada.yaml`
