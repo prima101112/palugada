@@ -1,6 +1,6 @@
 # PALUGADA
 
-> palugada is `apa lu mau gua ada` anything you need i'm here
+> palugada is `apa lu mau gua ada`. anything you need i'm here
 
 palugada is a docker images base on alpine that full of tools
 this images is created because we need more than busybox and less than full ubuntu images
@@ -33,5 +33,5 @@ you clould pull it by
 
 ## Kubernetes
 you could apply this at once with
-`kubectl create -f https://raw.githubusercontent.com/prima101112/palugada/master/palugada.yaml`
+```kubectl create -f https://raw.githubusercontent.com/prima101112/palugada/master/palugada.yaml```
 this raw will create pods and service in default namespace
