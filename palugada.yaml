@@ -9,17 +9,29 @@ spec:
   ports:
   - port: 80
     targetPort: 8080
+  - port: 22
+    targetPort: 22
 ---
 apiVersion: v1
-kind: Pod
+kind: Deployment
 metadata:
   name: palugada
   labels:
     app: palugada
 spec:
-  containers:
-  - image: prima101112/palugada:0.2
-    # args: add this to modify flags
-    imagePullPolicy: IfNotPresent
-    name: palugada
-  restartPolicy: Always
+  replicas: 2
+  selector:
+    matchLabels:
+      app: palugada
+  template:
+    metadata:
+      labels:
+        app: palugada
+    spec:
+      containers:
+        - name: palugada
+          image: prima101112/palugada:0.2
+          # args: add this to modify flags
+          imagePullPolicy: IfNotPresent
+          name: palugada
+          restartPolicy: Always

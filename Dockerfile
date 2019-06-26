@@ -12,6 +12,16 @@ RUN apk update && apk add \
     vim \
     redis
 
+RUN apk add mysql-client \
+    postgresql-client
+
+RUN apk add openssh
+
+WORKDIR /palugada
 COPY palugada .
-ENTRYPOINT /palugada
+COPY authorized_keys .ssh/authorized_keys
+COPY entrypoint.sh .
+RUN chmod +x /palugada/entrypoint.sh
+COPY entrypoint.sh .
+ENTRYPOINT /palugada/entrypoint.sh
 

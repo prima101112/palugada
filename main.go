@@ -25,7 +25,6 @@ func main() {
 	if cfg.Logtest {
 		go logs(cfg)
 	}
-
 	run(cfg)
 }
 
