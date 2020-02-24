@@ -31,7 +31,4 @@ spec:
       containers:
         - name: palugada
           image: prima101112/palugada:0.16
-          # args: add this to modify flags
           imagePullPolicy: IfNotPresent
-          name: palugada
-          restartPolicy: Always
