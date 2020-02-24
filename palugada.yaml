@@ -8,8 +8,10 @@ spec:
     app: palugada
   ports:
   - port: 80
+    name : http
     targetPort: 8080
   - port: 22
+    name: ssh
     targetPort: 22
 ---
 apiVersion: apps/v1
